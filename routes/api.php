@@ -16,5 +16,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:api')->get('/users', function (Request $request) {
-    return User::with('tenant')->get();
+    return User::all();
 });

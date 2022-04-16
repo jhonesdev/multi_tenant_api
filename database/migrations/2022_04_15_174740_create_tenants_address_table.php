@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('tenants_addresses', function (Blueprint $table) {
             $table->id();
             $table->foreignId('tenant_id')->constrained('tenants');
-            $table->foreignId('type_id')->constrained('addresses_types');
+            $table->foreignId('type_id')->constrained('address_types');
             $table->string('street_name');
             $table->integer('street_number')->nullable();
             $table->string('neighborhood', 100);

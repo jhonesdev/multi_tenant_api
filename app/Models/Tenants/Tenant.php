@@ -4,7 +4,7 @@ namespace App\Models\Tenants;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tenants extends Model
+class Tenant extends Model
 {
 
     protected $table = 'tenants';
@@ -12,7 +12,7 @@ class Tenants extends Model
     protected $fillable = [
         'corporate_name', 'fantasy_name',
         'document', 'state_registration',
-        'active',
+        'active'
     ];
 
     protected $guards = ['id'];
@@ -23,15 +23,15 @@ class Tenants extends Model
 
     public function address()
     {
-        return $this->hasMany(TenantsAddresses::class, 'tenant_id', 'id');
+        return $this->hasMany(TenantAddress::class, 'tenant_id', 'id');
     }
 
     /**
      * Get contacts associated with the tentant.
      */
 
-    public function contacts()
+    public function contact()
     {
-        return $this->hasMany(TenantsContacts::class, 'tenant_id', 'id');
+        return $this->hasMany(TenantContact::class, 'tenant_id', 'id');
     }
 }

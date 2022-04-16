@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('tenants_contacts', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('type_id')->constrained('contacts_types');
+            $table->foreignId('type_id')->constrained('contact_types');
             $table->foreignId('tenant_id')->constrained('tenants');
             $table->string('name', 80);
             $table->string('phone', 20)->nullable();

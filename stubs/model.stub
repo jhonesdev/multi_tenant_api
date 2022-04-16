@@ -10,5 +10,11 @@ class {{ class }} extends Model
 
     use Tenantable;
 
+    //protected $table = "";
+
+    protected $fillable = [];
+
     protected $guarded = ['id'];
+
+    //protected $timestamp = false;
 }

@@ -2,9 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Database\Seeders\tests\TenantSeeder;
-use Database\Seeders\tests\TenantUserSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseTestSeeder extends Seeder

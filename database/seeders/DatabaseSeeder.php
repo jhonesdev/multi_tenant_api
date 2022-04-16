@@ -3,8 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Database\Seeders\defaults\AddressesTypesSeeder;
-use Database\Seeders\defaults\ContactsTypesSeeder;
+use Database\Seeders\defaults\AddressTypesSeeder;
+use Database\Seeders\defaults\ContactTypesSeeder;
 use Database\Seeders\defaults\UsersSeeder;
 use Illuminate\Database\Seeder;
 
@@ -19,8 +19,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             UsersSeeder::class,
-            AddressesTypesSeeder::class,
-            ContactsTypesSeeder::class
+            AddressTypesSeeder::class,
+            ContactTypesSeeder::class
         ]);
     }
 }

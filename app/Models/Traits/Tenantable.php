@@ -3,7 +3,7 @@
 namespace App\Models\Traits;
 
 use App\Scopes\TenantScope;
-use App\Models\Tenants\Tenants;
+use App\Models\Tenants\Tenant;
 use Illuminate\Support\Facades\Auth;
 
 trait Tenantable
@@ -19,6 +19,6 @@ trait Tenantable
     }
 
     public function tenant(){
-        return $this->belongsTo(Tenants::class, 'tenant_id', 'id');
+        return $this->belongsTo(Tenant::class, 'tenant_id', 'id');
     }
 }

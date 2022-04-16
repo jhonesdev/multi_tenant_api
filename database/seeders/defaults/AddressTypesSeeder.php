@@ -5,7 +5,7 @@ namespace Database\Seeders\defaults;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class ContactsTypesSeeder extends Seeder
+class AddressTypesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,12 +14,16 @@ class ContactsTypesSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('contacts_types')->insert([
+        DB::table('address_types')->insert([
             'description' => 'padrão'
         ]);
 
-        DB::table('contacts_types')->insert([
-            'description' => 'financeiro'
-        ]);        
+        DB::table('address_types')->insert([
+            'description' => 'entrega'
+        ]);
+
+        DB::table('address_types')->insert([
+            'description' => 'cobrança'
+        ]);
     }
 }

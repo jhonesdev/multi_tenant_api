@@ -2,9 +2,10 @@
 
 namespace App\Models\Tenants;
 
+use App\Models\Support\ContactType;
 use Illuminate\Database\Eloquent\Model;
 
-class TenantsContacts extends Model
+class TenantContact extends Model
 {
 
     protected $table = 'tenants_contacts';
@@ -15,4 +16,12 @@ class TenantsContacts extends Model
     ];
 
     protected $guards = ['id'];
+
+    /**
+     * Get type associated with the contact.
+     */
+
+    public function type(){
+        return $this->hasOne(ContactType::class, 'id', 'type_id');
+    }
 }

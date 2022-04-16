@@ -2,11 +2,10 @@
 
 namespace Database\Seeders\tests;
 
-use App\Models\Tenants\Tenants;
-use Faker\Factory as Faker;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Tenants\Tenant;
 
 class TenantSeeder extends Seeder
 {
@@ -22,7 +21,7 @@ class TenantSeeder extends Seeder
 
         try {
 
-            $tenant = Tenants::create([
+            $tenant = Tenant::create([
                 'corporate_name' => 'KJhones Company',
                 'fantasy_name' => '********',
                 'document' => '00.000.000/0000-00',

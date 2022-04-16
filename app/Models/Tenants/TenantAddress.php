@@ -2,9 +2,10 @@
 
 namespace App\Models\Tenants;
 
+use App\Models\Support\AddressType;
 use Illuminate\Database\Eloquent\Model;
 
-class TenantsAddresses extends Model
+class TenantAddress extends Model
 {
 
     protected $table = 'tenants_addresses';
@@ -15,4 +16,12 @@ class TenantsAddresses extends Model
     ];
 
     protected $guards = ['id'];
+
+    /**
+     * Get type associated with the address.
+     */
+
+    public function type(){
+        return $this->hasOne(AddressType::class, 'id', 'type_id');
+    }
 }
